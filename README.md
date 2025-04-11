@@ -1,165 +1,195 @@
-Here's the refined and polished README.md for AfyaMkononi with improved formatting, organization, and visual appeal:
+# 🌿 AfyaMkononi
 
-```markdown
-# AfyaMkononi  
-### *AI-Powered Telemedicine for Maternal and Child Health*  
+**AI-Powered Telemedicine Web App for Maternal and Child Health**
 
-![AfyaMkononi Banner](https://via.placeholder.com/1200x400?text=AfyaMkononi+-+Health+in+Your+Hands)  
+![AfyaMkononi Logo](https://your-logo-link.com/logo.png) <!-- Replace with your actual logo URL -->
 
-**AfyaMkononi** (*"Health in Your Hands"*) is an AI-driven telemedicine platform revolutionizing maternal and child healthcare in underserved communities through accessible, intelligent remote care solutions.
+> _AfyaMkononi_ (“Health in Your Hands”) is a comprehensive telemedicine platform that leverages AI to deliver personalized maternal and child healthcare remotely—especially for underserved communities.
 
 ---
 
-## 📋 Table of Contents
-1. [Concept](#-concept)  
-2. [Features](#-features)  
-3. [Tech Stack](#-tech-stack)  
-4. [Architecture](#-architecture)  
-5. [API Reference](#-api-reference)  
-6. [AI Integration](#-ai-integration)  
-7. [Getting Started](#-getting-started)  
-8. [Contributing](#-contributing)  
-9. [License](#-license)  
+## 📚 Table of Contents
+
+- [🌍 Concept Overview](#concept-overview)
+- [✨ Key Features](#key-features)
+- [💻 Technical Implementation](#technical-implementation)
+- [📂 Project Structure](#project-structure)
+- [🔌 API Endpoints](#api-endpoints)
+- [🤖 AI/ML Integration](#aiml-integration)
+- [⚙️ Setup & Installation](#setup--installation)
+- [🤝 Contributing](#contributing)
+- [📜 License](#license)
+- [💡 Need Help?](#need-help)
 
 ---
 
-## 🌟 Concept  
-### Bridging Healthcare Gaps with AI  
-AfyaMkononi delivers:  
-- **Virtual Clinic**: On-demand video consultations with specialists  
-- **Smart Monitoring**: AI-powered pregnancy and child health tracking  
-- **Preventive Care**: Early risk detection and personalized recommendations  
-- **Accessibility**: Swahili/English multilingual support  
+## 🌍 Concept Overview
+
+**AfyaMkononi** bridges the gap in maternal and child healthcare by providing:
+
+- ✅ **AI-assisted virtual consultations** with OB-GYNs, pediatricians, and midwives  
+- ✅ **Smart pregnancy & child health tracking** with predictive analytics  
+- ✅ **24/7 AI health assistant** for symptom checks and emergency alerts  
+- ✅ **Wearable integration** for remote vitals monitoring (BP, glucose, etc.)
 
 ---
 
-## ✨ Features  
+## ✨ Key Features
 
-### 🩺 Core Capabilities  
-| Feature | Description |  
-|---------|-------------|  
-| **AI Triage** | Symptom checker with 90%+ accuracy |  
-| **Remote Monitoring** | Wearable integration for vital signs |  
-| **Vaccination Tracker** | Automated schedule reminders |  
-| **Emergency Alerts** | AI detection of critical symptoms |  
+### 1. 🩺 AI-Assisted Virtual Consultations
+- Secure video calls via WebRTC
+- AI symptom checker for preliminary triage
+- NLP-powered chatbot to address patient queries
 
-### 📱 User-Centric Design  
-- Patient & doctor dashboards  
-- Mobile-first responsive interface  
-- Offline functionality for low-connectivity areas  
+### 2. 🤰 Pregnancy Monitoring
+- Trimester-based AI insights and risk scoring
+- Complication risk assessments
+- Personalized wellness and nutrition plans
+
+### 3. 👶 Child Health Tracking
+- Growth and developmental milestone monitoring
+- Vaccine reminders and scheduling
+- Weight/height percentile tracking
+
+### 4. 🧠 Intelligent Health Assistant
+- 24/7 chatbot in English & Swahili
+- Medication reminders with drug interaction alerts
+- Emergency symptom detection system
+
+### 5. 📡 Remote Monitoring
+- Integration with wearables (e.g. Fitbit)
+- AI analysis of vitals recorded at home
+- Alerts for anomalies or critical symptoms
 
 ---
 
-## 🛠 Tech Stack  
+## 💻 Technical Implementation
 
-### Frontend  
-![React](https://img.shields.io/badge/React-18-blue) ![WebRTC](https://img.shields.io/badge/WebRTC-Real--time-green)  
-
-### Backend  
-![Node.js](https://img.shields.io/badge/Node.js-20-success) ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-15-informational)  
-
-### AI/ML  
-![TensorFlow](https://img.shields.io/badge/TensorFlow-2.15-orange) ![HuggingFace](https://img.shields.io/badge/HuggingFace-NLP-yellow)  
+| Component         | Technology Stack                        |
+|------------------|-----------------------------------------|
+| **Frontend**      | React.js, WebRTC, Chart.js              |
+| **Backend**       | Node.js/Express _or_ Django, PostgreSQL |
+| **AI/ML Models**  | TensorFlow, PyTorch, Hugging Face       |
+| **Telemedicine**  | Agora / Twilio API, WebSockets          |
+| **Security**      | JWT, OAuth 2.0, HIPAA-compliant encryption |
 
 ---
 
-## 🏗 Architecture  
+## 📂 Project Structure
 
-```bash
-afyamkononi/
-├── frontend/          # React application
-│   ├── public/        # Static assets
-│   └── src/           # Core application logic
-│
-├── backend/           # Node.js/Express server
-│   ├── api/           # REST endpoints
-│   └── ai/            # Model inference
-│
-└── infrastructure/    # Deployment configs
-    ├── docker/        # Containerization
-    └── ci-cd/         # GitHub Actions
+### Frontend (`/frontend`)
+```
+frontend/
+├── public/            # Static assets (HTML, icons)
+├── src/
+│   ├── components/    # UI Components (Auth, Dashboard)
+│   ├── pages/         # Patient & Doctor views
+│   ├── services/      # API calls, WebRTC configs
+│   └── store/         # Redux state management
+```
+
+### Backend (`/backend`)
+```
+backend/
+├── controllers/       # Authentication, AI logic, patient records
+├── models/            # PostgreSQL/MongoDB schemas
+├── routes/            # REST API endpoints
+└── services/          # Business logic, AI inference
+```
+
+### AI/ML Models (`/ai-models`)
+```
+ai-models/
+├── pregnancy-risk/    # Trimester risk prediction
+├── symptom-checker/   # NLP-based triage
+└── vision/            # Ultrasound & image-based diagnosis
 ```
 
 ---
 
-## 🔌 API Reference  
-Key Endpoints:  
+## 🔌 API Endpoints
 
-| Endpoint | Method | Auth | Description |
-|----------|--------|------|-------------|
-| `/api/v1/consultations` | POST | JWT | Start video session |
-| `/api/v1/risk-assessment` | POST | JWT | Pregnancy risk analysis |
-| `/ws/notifications` | WS | JWT | Real-time alerts |
+| Endpoint                | Method | Description                          |
+|-------------------------|--------|--------------------------------------|
+| `/api/auth/signup`      | POST   | Patient/Doctor registration          |
+| `/api/ai/symptom-check` | POST   | AI triage system                     |
+| `/api/webrtc/token`     | GET    | Video call token generation          |
+| `/ws/ai-chat`           | WS     | Real-time chatbot with AI support    |
 
-[View Full API Documentation](docs/api.md)
-
----
-
-## 🤖 AI Integration  
-### Predictive Models  
-1. **Pregnancy Risk Engine**  
-   - Input: Patient history + vitals  
-   - Output: Risk score (0-10)  
-
-2. **Symptom Checker NLP**  
-   - Supports Swahili/English queries  
-   - 85% intent recognition accuracy  
-
-3. **Image Diagnostics**  
-   - Ultrasound analysis via CV models  
+📖 _More details in_ `/backend/routes/`
 
 ---
 
-## 🚀 Getting Started  
+## 🤖 AI/ML Integration
 
-### Prerequisites  
-- Node.js 18+  
-- Python 3.10+  
-- PostgreSQL 15  
+- **Pregnancy Risk Model** – TensorFlow-based trimester complication prediction  
+- **Symptom Checker NLP** – Hugging Face for language understanding  
+- **Medical Imaging Analysis** – OpenCV + ONNX for ultrasound diagnostics
 
-### Installation  
+---
+
+## ⚙️ Setup & Installation
+
+### ✅ Prerequisites
+- Node.js ≥ 16  
+- Python ≥ 3.8  
+- PostgreSQL / MongoDB  
+- Agora/Twilio API keys  
+
+### 🚀 Installation
+
 ```bash
-# Clone repository
-git clone https://github.com/afyamkononi/core.git
+# Clone the repository
+git clone https://github.com/your-repo/afyamkononi.git
+cd afyamkononi
 
-# Install dependencies
-cd frontend && yarn install
-cd ../backend && pip install -r requirements.txt
+# Install frontend
+cd frontend && npm install
+
+# Install backend
+cd ../backend && npm install
 
 # Configure environment
-cp .env.example .env
-```
+cp .env.example .env  # Update your keys and DB info
 
-### Running Locally  
-```bash
-# Start backend
-cd backend && python app.py
-
-# Start frontend
-cd frontend && yarn start
+# Run the app
+npm run dev           # Start frontend
+npm start             # Start backend
 ```
 
 ---
 
-## 🤝 Contributing  
-We welcome contributions! Please:  
-1. Fork the repository  
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)  
-3. Submit a pull request  
+## 🤝 Contributing
 
-See our [Contribution Guidelines](CONTRIBUTING.md) for details.
+We ❤️ contributions!
+
+1. Fork this repo  
+2. Create your feature branch:  
+   ```bash
+   git checkout -b feature/my-feature
+   ```
+3. Commit and push changes  
+4. Submit a Pull Request with a clear description
 
 ---
 
-## 📜 License  
-Distributed under the **MIT License**. See `LICENSE` for more information.
+## 📜 License
+
+MIT © 2024 AfyaMkononi
 
 ---
 
-## 📬 Contact  
-**Project Lead**: [Dr. Amina Mambo](mailto:amina@afyamkononi.app)  
-**Website**: [https://afyamkononi.app](https://afyamkononi.app)  
+## 💡 Need Help?
 
-[![Twitter Follow](https://img.shields.io/twitter/follow/afyamkononi?style=social)](https://twitter.com/afyamkononi)
+📧 support@afyamkononi.app  
+🌐 [Visit Website](https://afyamkononi.app)
+
+---
+
+> _“Because every mother and child deserves accessible, intelligent healthcare—right from the palm of their hand.”_
 
 ```
+
+---
+
+Let me know if you'd like to add badges (build status, license, contributors), live demo links, Figma designs, or GitHub Pages integration.
