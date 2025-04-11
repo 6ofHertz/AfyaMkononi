@@ -1,0 +1,74 @@
+frontend/
+├── public/                   # Static assets
+│   ├── index.html            # Main HTML entry point
+│   ├── assets/               # Media files
+│   │   ├── icons/            # App icons
+│   │   ├── images/           # App images
+│   │   └── fonts/            # Custom fonts
+│   └── robots.txt            # SEO config
+│
+├── src/
+│   ├── components/           # Reusable UI components
+│   │   ├── common/           # Shared components
+│   │   │   ├── Button/
+│   │   │   ├── Card/
+│   │   │   ├── Header/
+│   │   │   └── Footer/
+│   │   │
+│   │   ├── auth/             # Authentication
+│   │   │   ├── LoginForm/
+│   │   │   └── RegisterForm/
+│   │   │
+│   │   ├── telemedicine/     # Video consultation
+│   │   │   ├── VideoCall/
+│   │   │   └── CallControls/
+│   │   │
+│   │   └── health/           # Health tracking
+│   │       ├── PregnancyTracker/
+│   │       └── ChildGrowthChart/
+│   │
+│   ├── pages/                # Application screens
+│   │   ├── Home/             # Landing page
+│   │   ├── Auth/             # Authentication flows
+│   │   ├── Patient/          # Patient views
+│   │   │   ├── Dashboard/    # Patient home
+│   │   │   ├── Pregnancy/    # Pregnancy tracking
+│   │   │   └── Children/     # Child health
+│   │   │
+│   │   ├── Doctor/           # Doctor views
+│   │   │   ├── Clinic/       # Doctor dashboard
+│   │   │   └── Patients/     # Patient management
+│   │   │
+│   │   └── Admin/            # Admin console
+│   │
+│   ├── services/             # Business logic
+│   │   ├── api/              # API clients
+│   │   │   ├── auth.js       # Auth API
+│   │   │   └── patients.js   # Patient data
+│   │   │
+│   │   ├── webrtc/           # Video call service
+│   │   ├── ai/               # AI service integration
+│   │   └── analytics/        # Usage tracking
+│   │
+│   ├── store/                # State management
+│   │   ├── slices/           # Redux state slices
+│   │   │   ├── auth.js       # Auth state
+│   │   │   └── patient.js    # Patient data
+│   │   └── store.js          # Redux store
+│   │
+│   ├── styles/               # Global styling
+│   │   ├── themes/           # Design system
+│   │   ├── globals.css       # Base styles
+│   │   └── variables.scss    # Design tokens
+│   │
+│   ├── utils/                # Helper functions
+│   │   ├── formatters.js     # Data formatting
+│   │   └── validators.js     # Input validation
+│   │
+│   ├── App.js                # Root component
+│   ├── main.js               # App entry point
+│   └── routes.js             # Navigation config
+│
+├── .env                      # Environment variables
+├── package.json              # Dependencies
+└── README.md                 # Frontend docs
